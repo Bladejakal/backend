@@ -1,0 +1,1202 @@
+{
+  "errors": [
+  ],
+  "warnings": [
+  ],
+  "version": "4.41.2",
+  "hash": "e49018f40fe576964a68",
+  "time": 169,
+  "builtAt": 1571231178653,
+  "publicPath": "",
+  "outputPath": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/build",
+  "assetsByChunkName": {
+    "main": "index.js"
+  },
+  "assets": [
+    {
+      "name": "index.js",
+      "size": 3403,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+      },
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "index.js"
+      ],
+      "children": {
+      },
+      "childAssets": {
+      }
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "index.js"
+      ],
+      "children": {
+      },
+      "childAssets": {
+      }
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 4170,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "index.js"
+      ],
+      "hash": "c5b0f6ecd78bc47f665d",
+      "siblings": [
+      ],
+      "parents": [
+      ],
+      "children": [
+      ],
+      "childrenByOrder": {
+      },
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "external \"express\"",
+          "name": "external \"express\"",
+          "index": 2,
+          "index2": 0,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "issuerId": 2,
+          "issuerName": "./source/server.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 2,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "name": "./source/server.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "module": "./source/server.js",
+              "moduleName": "./source/server.js",
+              "type": "cjs require",
+              "userRequest": "express",
+              "loc": "8:38-56"
+            },
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+              "module": "./source/routers/users/index.js",
+              "moduleName": "./source/routers/users/index.js",
+              "type": "cjs require",
+              "userRequest": "express",
+              "loc": "8:38-56"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2
+        },
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js",
+          "index": 0,
+          "index2": 9,
+          "size": 254,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "loc": "main"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "source": "\"use strict\";\n\nvar _server = require(\"./server\");\n\nvar _utils = require(\"./utils\");\n\n// Instruments\nconst PORT = (0, _utils.getPort)();\n\n_server.app.listen(PORT, () => {\n  // eslint-disable-next-line\n  console.log(`Server API is up on port ${PORT}`);\n});"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js",
+          "index": 1,
+          "index2": 5,
+          "size": 1280,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "issuerId": 1,
+          "issuerName": "./source/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "module": "./source/index.js",
+              "moduleName": "./source/index.js",
+              "type": "cjs require",
+              "userRequest": "./server",
+              "loc": "3:14-33"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.app = void 0;\n\nvar _express = _interopRequireDefault(require(\"express\"));\n\nvar routers = _interopRequireWildcard(require(\"./routers\"));\n\nfunction _getRequireWildcardCache() { if (typeof WeakMap !== \"function\") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Core\n//Routers\nconst app = (0, _express.default)();\nexports.app = app;\napp.use('/users', routers.users);"
+        },
+        {
+          "id": 3,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "name": "./source/routers/index.js",
+          "index": 3,
+          "index2": 4,
+          "size": 229,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "issuerId": 2,
+          "issuerName": "./source/server.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 2,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "name": "./source/server.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "module": "./source/server.js",
+              "moduleName": "./source/server.js",
+              "type": "cjs require",
+              "userRequest": "./routers",
+              "loc": "10:38-58"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"users\", {\n  enumerable: true,\n  get: function () {\n    return _users.users;\n  }\n});\n\nvar _users = require(\"./users\");"
+        },
+        {
+          "id": 4,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "name": "./source/routers/users/index.js",
+          "index": 4,
+          "index2": 3,
+          "size": 586,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "issuerId": 3,
+          "issuerName": "./source/routers/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 2,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "name": "./source/server.js"
+            },
+            {
+              "id": 3,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+              "name": "./source/routers/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+              "module": "./source/routers/index.js",
+              "moduleName": "./source/routers/index.js",
+              "type": "cjs require",
+              "userRequest": "./users",
+              "loc": "13:13-31"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 3,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.users = exports.router = void 0;\n\nvar _express = _interopRequireDefault(require(\"express\"));\n\nvar _handlers = require(\"./handlers\");\n\nvar _hash = require(\"./hash\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express.default.Router();\n\nexports.users = exports.router = router;\nrouter.get('/', _handlers.get);\nrouter.post('/', _handlers.post);\nrouter.get('/:userHash', _hash.getByHash); // router.put('/:userHash', updateByHash);"
+        },
+        {
+          "id": 5,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/handlers.js",
+          "name": "./source/routers/users/handlers.js",
+          "index": 5,
+          "index2": 1,
+          "size": 515,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "issuerId": 4,
+          "issuerName": "./source/routers/users/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 2,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "name": "./source/server.js"
+            },
+            {
+              "id": 3,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+              "name": "./source/routers/index.js"
+            },
+            {
+              "id": 4,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+              "name": "./source/routers/users/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+              "module": "./source/routers/users/index.js",
+              "moduleName": "./source/routers/users/index.js",
+              "type": "cjs require",
+              "userRequest": "./handlers",
+              "loc": "10:16-37"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 4,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.post = exports.get = void 0;\n\nconst get = (req, res) => {\n  try {\n    res.status(200).json({\n      data: []\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.get = get;\n\nconst post = (req, res) => {\n  try {\n    res.status(201).json({\n      data: {}\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.post = post;"
+        },
+        {
+          "id": 6,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/hash/index.js",
+          "name": "./source/routers/users/hash/index.js",
+          "index": 6,
+          "index2": 2,
+          "size": 323,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "issuerId": 4,
+          "issuerName": "./source/routers/users/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 2,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+              "name": "./source/server.js"
+            },
+            {
+              "id": 3,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+              "name": "./source/routers/index.js"
+            },
+            {
+              "id": 4,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+              "name": "./source/routers/users/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+              "module": "./source/routers/users/index.js",
+              "moduleName": "./source/routers/users/index.js",
+              "type": "cjs require",
+              "userRequest": "./hash",
+              "loc": "12:12-29"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 4,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getByHash = void 0;\n\nconst getByHash = (req, res) => {\n  try {\n    res.status(200).json({\n      data: {}\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.getByHash = getByHash;"
+        },
+        {
+          "id": 7,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+          "name": "./source/utils/index.js",
+          "index": 7,
+          "index2": 8,
+          "size": 227,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "issuerId": 1,
+          "issuerName": "./source/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "module": "./source/index.js",
+              "moduleName": "./source/index.js",
+              "type": "cjs require",
+              "userRequest": "./utils",
+              "loc": "5:13-31"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"getPort\", {\n  enumerable: true,\n  get: function () {\n    return _env.getPort;\n  }\n});\n\nvar _env = require(\"./env\");"
+        },
+        {
+          "id": 8,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+          "name": "./source/utils/env/index.js",
+          "index": 8,
+          "index2": 7,
+          "size": 239,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+          "issuerId": 7,
+          "issuerName": "./source/utils/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 7,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+              "name": "./source/utils/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 7,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+              "module": "./source/utils/index.js",
+              "moduleName": "./source/utils/index.js",
+              "type": "cjs require",
+              "userRequest": "./env",
+              "loc": "13:11-27"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"getPort\", {\n  enumerable: true,\n  get: function () {\n    return _getPort.getPort;\n  }\n});\n\nvar _getPort = require(\"./getPort\");"
+        },
+        {
+          "id": 9,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/getPort.js",
+          "name": "./source/utils/env/getPort.js",
+          "index": 9,
+          "index2": 6,
+          "size": 475,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+          "issuerId": 8,
+          "issuerName": "./source/utils/env/index.js",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+              "name": "./source/index.js"
+            },
+            {
+              "id": 7,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+              "name": "./source/utils/index.js"
+            },
+            {
+              "id": 8,
+              "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+              "name": "./source/utils/env/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+              "module": "./source/utils/env/index.js",
+              "moduleName": "./source/utils/env/index.js",
+              "type": "cjs require",
+              "userRequest": "./getPort",
+              "loc": "13:15-35"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 3,
+          "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getPort = void 0;\n\nconst getPort = () => {\n  const {\n    PORT\n  } = process.env;\n\n  if (!PORT) {\n    throw new Error('Environment variable PORT should be specified');\n  }\n\n  const isValid = /^[3-9]{1}[0-9]{3}$/.test(PORT);\n\n  if (!isValid) {\n    throw new Error('Environment variable PORT should a number and be between 3000 and 9999');\n  }\n\n  return PORT;\n};\n\nexports.getPort = getPort;"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "reasons": [
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "external \"express\"",
+      "name": "external \"express\"",
+      "index": 2,
+      "index2": 0,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+      "issuerId": 2,
+      "issuerName": "./source/server.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "module": "./source/server.js",
+          "moduleName": "./source/server.js",
+          "type": "cjs require",
+          "userRequest": "express",
+          "loc": "8:38-56"
+        },
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "module": "./source/routers/users/index.js",
+          "moduleName": "./source/routers/users/index.js",
+          "type": "cjs require",
+          "userRequest": "express",
+          "loc": "8:38-56"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2
+    },
+    {
+      "id": 1,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+      "name": "./source/index.js",
+      "index": 0,
+      "index2": 9,
+      "size": 254,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "loc": "main"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0,
+      "source": "\"use strict\";\n\nvar _server = require(\"./server\");\n\nvar _utils = require(\"./utils\");\n\n// Instruments\nconst PORT = (0, _utils.getPort)();\n\n_server.app.listen(PORT, () => {\n  // eslint-disable-next-line\n  console.log(`Server API is up on port ${PORT}`);\n});"
+    },
+    {
+      "id": 2,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+      "name": "./source/server.js",
+      "index": 1,
+      "index2": 5,
+      "size": 1280,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+      "issuerId": 1,
+      "issuerName": "./source/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "module": "./source/index.js",
+          "moduleName": "./source/index.js",
+          "type": "cjs require",
+          "userRequest": "./server",
+          "loc": "3:14-33"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.app = void 0;\n\nvar _express = _interopRequireDefault(require(\"express\"));\n\nvar routers = _interopRequireWildcard(require(\"./routers\"));\n\nfunction _getRequireWildcardCache() { if (typeof WeakMap !== \"function\") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Core\n//Routers\nconst app = (0, _express.default)();\nexports.app = app;\napp.use('/users', routers.users);"
+    },
+    {
+      "id": 3,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+      "name": "./source/routers/index.js",
+      "index": 3,
+      "index2": 4,
+      "size": 229,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+      "issuerId": 2,
+      "issuerName": "./source/server.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "module": "./source/server.js",
+          "moduleName": "./source/server.js",
+          "type": "cjs require",
+          "userRequest": "./routers",
+          "loc": "10:38-58"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"users\", {\n  enumerable: true,\n  get: function () {\n    return _users.users;\n  }\n});\n\nvar _users = require(\"./users\");"
+    },
+    {
+      "id": 4,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+      "name": "./source/routers/users/index.js",
+      "index": 4,
+      "index2": 3,
+      "size": 586,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+      "issuerId": 3,
+      "issuerName": "./source/routers/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js"
+        },
+        {
+          "id": 3,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "name": "./source/routers/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "module": "./source/routers/index.js",
+          "moduleName": "./source/routers/index.js",
+          "type": "cjs require",
+          "userRequest": "./users",
+          "loc": "13:13-31"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 3,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.users = exports.router = void 0;\n\nvar _express = _interopRequireDefault(require(\"express\"));\n\nvar _handlers = require(\"./handlers\");\n\nvar _hash = require(\"./hash\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express.default.Router();\n\nexports.users = exports.router = router;\nrouter.get('/', _handlers.get);\nrouter.post('/', _handlers.post);\nrouter.get('/:userHash', _hash.getByHash); // router.put('/:userHash', updateByHash);"
+    },
+    {
+      "id": 5,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/handlers.js",
+      "name": "./source/routers/users/handlers.js",
+      "index": 5,
+      "index2": 1,
+      "size": 515,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+      "issuerId": 4,
+      "issuerName": "./source/routers/users/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js"
+        },
+        {
+          "id": 3,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "name": "./source/routers/index.js"
+        },
+        {
+          "id": 4,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "name": "./source/routers/users/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "module": "./source/routers/users/index.js",
+          "moduleName": "./source/routers/users/index.js",
+          "type": "cjs require",
+          "userRequest": "./handlers",
+          "loc": "10:16-37"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 4,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.post = exports.get = void 0;\n\nconst get = (req, res) => {\n  try {\n    res.status(200).json({\n      data: []\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.get = get;\n\nconst post = (req, res) => {\n  try {\n    res.status(201).json({\n      data: {}\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.post = post;"
+    },
+    {
+      "id": 6,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/hash/index.js",
+      "name": "./source/routers/users/hash/index.js",
+      "index": 6,
+      "index2": 2,
+      "size": 323,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+      "issuerId": 4,
+      "issuerName": "./source/routers/users/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 2,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/server.js",
+          "name": "./source/server.js"
+        },
+        {
+          "id": 3,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/index.js",
+          "name": "./source/routers/index.js"
+        },
+        {
+          "id": 4,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "name": "./source/routers/users/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/routers/users/index.js",
+          "module": "./source/routers/users/index.js",
+          "moduleName": "./source/routers/users/index.js",
+          "type": "cjs require",
+          "userRequest": "./hash",
+          "loc": "12:12-29"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 4,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getByHash = void 0;\n\nconst getByHash = (req, res) => {\n  try {\n    res.status(200).json({\n      data: {}\n    });\n  } catch (error) {\n    res.status(400).json({\n      message: error.message\n    });\n  }\n};\n\nexports.getByHash = getByHash;"
+    },
+    {
+      "id": 7,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+      "name": "./source/utils/index.js",
+      "index": 7,
+      "index2": 8,
+      "size": 227,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+      "issuerId": 1,
+      "issuerName": "./source/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "module": "./source/index.js",
+          "moduleName": "./source/index.js",
+          "type": "cjs require",
+          "userRequest": "./utils",
+          "loc": "5:13-31"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"getPort\", {\n  enumerable: true,\n  get: function () {\n    return _env.getPort;\n  }\n});\n\nvar _env = require(\"./env\");"
+    },
+    {
+      "id": 8,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+      "name": "./source/utils/env/index.js",
+      "index": 8,
+      "index2": 7,
+      "size": 239,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+      "issuerId": 7,
+      "issuerName": "./source/utils/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 7,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+          "name": "./source/utils/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 7,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+          "module": "./source/utils/index.js",
+          "moduleName": "./source/utils/index.js",
+          "type": "cjs require",
+          "userRequest": "./env",
+          "loc": "13:11-27"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"getPort\", {\n  enumerable: true,\n  get: function () {\n    return _getPort.getPort;\n  }\n});\n\nvar _getPort = require(\"./getPort\");"
+    },
+    {
+      "id": 9,
+      "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/getPort.js",
+      "name": "./source/utils/env/getPort.js",
+      "index": 9,
+      "index2": 6,
+      "size": 475,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+      "issuerId": 8,
+      "issuerName": "./source/utils/env/index.js",
+      "issuerPath": [
+        {
+          "id": 1,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/index.js",
+          "name": "./source/index.js"
+        },
+        {
+          "id": 7,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/index.js",
+          "name": "./source/utils/index.js"
+        },
+        {
+          "id": 8,
+          "identifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+          "name": "./source/utils/env/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/node_modules/babel-loader/lib/index.js!/home/vladyslav/mnt/lectrum/lesson-9_ Routing/tasks/task1/backend-intensive-3/source/utils/env/index.js",
+          "module": "./source/utils/env/index.js",
+          "moduleName": "./source/utils/env/index.js",
+          "type": "cjs require",
+          "userRequest": "./getPort",
+          "loc": "13:15-35"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 3,
+      "source": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getPort = void 0;\n\nconst getPort = () => {\n  const {\n    PORT\n  } = process.env;\n\n  if (!PORT) {\n    throw new Error('Environment variable PORT should be specified');\n  }\n\n  const isValid = /^[3-9]{1}[0-9]{3}$/.test(PORT);\n\n  if (!isValid) {\n    throw new Error('Environment variable PORT should a number and be between 3000 and 9999');\n  }\n\n  return PORT;\n};\n\nexports.getPort = getPort;"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [
+      ],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [
+  ]
+}
