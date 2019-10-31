@@ -31,6 +31,7 @@ app.use('/auth', routers.auth);
 app.use('/users', routers.users);
 app.use('/classes', routers.classes);
 app.use('/lessons', routers.lessons);
+app.use('/api', routers.api);
 
 app.use('*', (req, res, next) => {
     const error = new NotFoundError(

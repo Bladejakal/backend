@@ -1,14 +1,22 @@
-// Instruments
-import { getPassword } from './env';
+const passport = require('passport');
 
-const password = getPassword();
+const JwtStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
 
-export const authenticate = (req, res, next) => {
-    const auth = req.header('authorization');
+const opts = {};
 
-    if (auth && auth === password) {
-        next();
-    } else {
-        res.status(401).json({ message: 'authentication credentials are not valid' });
+opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+opts.secretOrKey = 'pa$$w0rd';
+
+const jwtStrategy = new JwtStrategy(opts, (payload, done) => {
+        if (payload.name !== 'John') {
+            return done(new Error('login first'), null);
+        }
+
+        return done(null, payload);
     }
-};
+);
+
+passport.use('jwt', jwtStrategy);
+
+export const authenticate = passport.authenticate('jwt', {session: false});
