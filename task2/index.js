@@ -2,42 +2,34 @@ load('../random.js')
 
 use vpuhach
 
-// Cleanup previous changes
-db.customers.drop(); // drops the collection customers
-db.orders.drop(); // drops the collection orders
+const customersCursor = db.customers.find({ 'name.first': /an/gi, 'name.last': /ie/gi });
 
-// Create collection customers
-db.createCollection('customers');
+const customersWithOrders = [];
 
-// Create collection customers
-db.createCollection('orders');
+while (customersCursor.hasNext()) {
+    const { _id, name: { first, last }, balance, created } = customersCursor.next();
 
-const customers = [];
+    let customerWithOrders = {
+        first,
+        last,
+        orders: [],
+    };
 
-for (let i = 0; i < 3000; i++) {
-    customers.push({
-        name: {
-            first: faker.fName(),
-            last: faker.lName(),
-        },
-        balance: randomNumber(100, 20000),
-        created: randomDate(new Date('2010-12-17T03:24:00'), new Date('2019-10-17T03:24:00'))
-    });
+    const orders = db.orders.aggregate([
+        { $match: { customerId: _id.valueOf() } },
+        { $group: { _id: '$product', total: {$sum : 1},  } }
+    ]);
+
+    while (orders.hasNext()) {
+        const {_id, total} = orders.next();
+
+        customerWithOrders.orders.push({
+            _id,
+            total
+        });
+    }
+
+    customersWithOrders.push(customerWithOrders);
 }
 
-const { insertedIds } = db.customers.insertMany(customers);
-
-const orders = [];
-
-insertedIds.forEach((insertedId) => {
-    orders.push({
-        customerId: insertedId.valueOf(),
-        count: randomNumber(1,100),
-        price: randomNumber(20, 100),
-        discount: randomNumber(5, 30),
-        title: faker.title(),
-        product: faker.product()
-    });
-});
-
-const { ordersInsertedIds } = db.orders.insertMany(orders);
+print(JSON.stringify(customersWithOrders));
