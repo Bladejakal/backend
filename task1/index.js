@@ -23,12 +23,19 @@ for (let i = 0; i < 3000; i++) {
         created: randomDate(new Date('2010-12-17T03:24:00'), new Date('2019-10-17T03:24:00'))
     });
 
-    db.orders.insertOne({
-        customerId: insertedId.valueOf(),
-        count: randomNumber(1,100),
-        price: randomNumber(20, 100),
-        discount: randomNumber(5, 30),
-        title: faker.title(),
-        product: faker.product()
-    });
+    const orders = [];
+    const randomOrdersCount = randomNumber(1, 10);
+
+    for (let i = 0; i < randomOrdersCount; i++) {
+        orders.push({
+            customerId: insertedId.valueOf(),
+            count: randomNumber(1,100),
+            price: randomNumber(20, 100),
+            discount: randomNumber(5, 30),
+            title: faker.title(),
+            product: faker.product()
+        });
+    }
+
+    db.orders.insertMany(orders);
 }

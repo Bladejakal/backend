@@ -30,14 +30,18 @@ const { insertedIds } = db.customers.insertMany(customers);
 const orders = [];
 
 insertedIds.forEach((insertedId) => {
-    orders.push({
-        customerId: insertedId.valueOf(),
-        count: randomNumber(1,100),
-        price: randomNumber(20, 100),
-        discount: randomNumber(5, 30),
-        title: faker.title(),
-        product: faker.product()
-    });
+    const randomOrdersCount = randomNumber(1, 10);
+
+    for (let i = 0; i < randomOrdersCount; i++) {
+        orders.push({
+            customerId: insertedId.valueOf(),
+            count: randomNumber(1, 100),
+            price: randomNumber(20, 100),
+            discount: randomNumber(5, 30),
+            title: faker.title(),
+            product: faker.product()
+        });
+    }
 });
 
 const { ordersInsertedIds } = db.orders.insertMany(orders);
