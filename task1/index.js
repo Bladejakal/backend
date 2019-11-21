@@ -2,33 +2,38 @@ load('../random.js')
 
 use vpuhach
 
-const customersCursor = db.customers.find({ 'name.first': /an/gi, 'name.last': /ie/gi });
+// Cleanup previous changes
+db.customers.drop(); // drops the collection customers
 
-const customersWithOrders = [];
+// Create collection customers
+db.createCollection('customers');
 
-while (customersCursor.hasNext()) {
-    const { _id, name: { first, last }, balance, created } = customersCursor.next();
+const customers = [];
 
-    let customerWithOrders = {
+for (let i = 0; i < 3000; i++) {
+    customers.push({
         name: {
-            first,
-            last
+            first: faker.fName(),
+            last: faker.lName(),
         },
-        balance,
-        created,
-        orders: []
-    };
-
-    const orders = db.orders.find({customerId: _id.valueOf()});
-
-    while (orders.hasNext()) {
-        const { count, price, discount, title, product } = orders.next();
-        customerWithOrders.orders.push({
-            count, price, discount, title, product
-        })
-    }
-
-    customersWithOrders.push(customerWithOrders);
+        nickname: faker.randomWord(), // not nickname off course, but why not )
+        email: `${faker.fName().toLowerCase()}@email.com`,
+        password: faker.randomWord(), // not password too, but let it be )
+        created: randomDate(new Date('2010-12-17T03:24:00'), new Date('2019-10-17T03:24:00'))
+    });
 }
 
-print(JSON.stringify(customersWithOrders));
+const { insertedIds } = db.customers.insertMany(customers);
+
+db.customers.createIndex({ email: 1 });
+db.customers.find({ 'email': /an/gi }); // find with index
+
+db.customers.createIndex({ 'name.first': 1, 'name.last': 1 });
+db.customers.find({ 'name.first': /an/gi, 'name.last': /ie/gi }); // find with index
+
+
+db.customers.createIndex({ 'email': 1, 'created': -1 });
+db.customers.find({ 'email': /an/gi,created: {
+        $gte: ISODate("2019-09-17T03:24:00"),
+        $lt: ISODate("2019-10-17T03:24:00")
+    } }).sort({ email: 1, created: -1 })

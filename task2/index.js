@@ -1,35 +1,31 @@
-load('../random.js')
-
 use vpuhach
 
-const customersCursor = db.customers.find({ 'name.first': /an/gi, 'name.last': /ie/gi });
+// Cleanup previous changes
+db.customers.drop(); // drops the collection customers
 
-const customersWithOrders = [];
+// Create collection customers
+db.createCollection('customers');
 
-while (customersCursor.hasNext()) {
-    const { _id, name: { first, last }, balance, created } = customersCursor.next();
+db.customers.insertOne({
+    name: {
+        first: 'John',
+        last:  'Doe'
+    },
+    nickname: 'jdoe_star',
+    email:    'jdoe@email.com',
+    password: 'ab123456cd',
+    created:  '2019-03-15T17:05:15.286Z'
+});
 
-    let customerWithOrders = {
-        first,
-        last,
-        orders: [],
-    };
+db.customers.createIndex({ nickname: 1, email: 1 }, { unique: true });
 
-    const orders = db.orders.aggregate([
-        { $match: { customerId: _id.valueOf() } },
-        { $group: { _id: '$product', total: {$sum : 1},  } }
-    ]);
-
-    while (orders.hasNext()) {
-        const {_id, total} = orders.next();
-
-        customerWithOrders.orders.push({
-            _id,
-            total
-        });
-    }
-
-    customersWithOrders.push(customerWithOrders);
-}
-
-print(JSON.stringify(customersWithOrders));
+db.customers.insertOne({
+    name: {
+        first: 'John',
+        last:  'Doe'
+    },
+    nickname: 'jdoe_star',
+    email:    'jdoe@email.com',
+    password: 'ab123456cd',
+    created:  '2019-03-15T17:05:15.286Z'
+});

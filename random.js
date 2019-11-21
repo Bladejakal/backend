@@ -1,3 +1,105 @@
+const cities = [
+    'East Tateberg',
+    'Feeneyland',
+    'Dietrichmouth',
+    'North Benton',
+    'West Guidomouth',
+    'Waelchitown',
+    'Port Dellaburgh',
+    'West Ozellatown',
+    'East Coralie',
+    'Skilesfurt',
+    'Padbergmouth',
+    'South Maritza',
+    'Wolftown',
+    'Lianafort',
+    'West Michaleshire',
+    'Gaylordberg',
+    'New Kathleen',
+    'North Akeem',
+    'North Alannamouth',
+    'Lake Edward',
+    'Rhettstad',
+    'East Lukaschester',
+    'North Sydniview',
+    'Hilpertburgh',
+    'Lake Violetteshire',
+    'South Ramiro',
+    'Kilbackport',
+    'New Seth',
+    'Waltermouth',
+    'Port Darrenfort',
+    'West Rickeyburgh',
+    'Willberg',
+    'East Eleanora',
+    'Rohanville',
+    'Laronville',
+    'Port Jerrold',
+    'West Doloresshire',
+    'Daxton',
+    'East Pierre',
+    'South Irvingborough',
+    'Jaceyside',
+    'Jaylinfort',
+    'East Cristalbury',
+    'Cronamouth',
+    'West Rosie',
+    'Hahnberg',
+    'South Kailyn',
+    'Lake Gerdaland',
+    'Douglasbury',
+    'West Carriefurt',
+    'East Gladysborough',
+    'West Greysonfort',
+    'Howellhaven',
+    'Lake Tonymouth',
+    'Mannton',
+    'South Hudsonport',
+    'Lake Kiptown',
+    'Lake Lew',
+    'Roobchester',
+    'Olsonshire',
+    'Goldnerview',
+    'Evertshire',
+    'Brakuschester',
+    'Jeanburgh',
+    'Harberton',
+    'North Angel',
+    'Pfefferstad',
+    'Kalebshire',
+    'East Aliviaborough',
+    'South Carleeport',
+    'Port Melliebury',
+    'New Creola',
+    'Leschstad',
+    'Bergehaven',
+    'New Novellamouth',
+    'Port Porterfurt',
+    'Fisherview',
+    'Fisherburgh',
+    'Auershire',
+    'Fatimaberg',
+    'South Elda',
+    'East Aliland',
+    'South Claudiehaven',
+    'New Sunny',
+    'Cummeratafort',
+    'Lake Dariofort',
+    'East Makenna',
+    'Kochtown',
+    'West Ashaville',
+    'Dietrichport',
+    'Aaronville',
+    'Weimannborough',
+    'Lake Mariellefurt',
+    'Flavioborough',
+    'East Ryleigh',
+    'West Twila',
+    'New Tatyana',
+    'Port Malindahaven',
+    'Emmerichshire',
+    'Creminborough'
+];
 const name = [
     'Bria',
     'Marta',
@@ -199,18 +301,6 @@ const products = [
     'Tomato'
 ];
 
-const titles = [
-    'Super Oranges',
-    'Strong Apples',
-    'Mega Carrots',
-    'Asome Bananas',
-    'Cool Lemons',
-    'Crazy Potatoes',
-    'Sweet Corn',
-    'Hard Pea',
-    'Fire Tomato'
-];
-
 const randomNumber = (from, to) =>
     Math.floor(Math.random() * (to - from + 1)) + from;
 
@@ -222,9 +312,21 @@ const randomDate = (start, end) =>
 const randomArray = (length, startNum, endNum) =>
     [...new Array(length)].map(() => randomNumber(startNum, endNum));
 
+const product = () => products[randomNumber(0, products.length - 1)];
+
 const faker = {
     fName: () => name[randomNumber(0, name.length - 1)],
     lName: () => surname[randomNumber(0, surname.length - 1)],
     product: () => products[randomNumber(0, products.length - 1)],
-    title: () => titles[randomNumber(0, titles.length - 1)]
+    randomWords: length => randomArray(length, 1, 1).map(() => product()),
+    randomWord: () => randomArray(1, 1, 1).map(() => product()),
+    randomCities: length =>
+        randomArray(length, 1, 1).map(
+            () => cities[randomNumber(0, cities.length - 1)]
+        ),
+    randomProducts: () =>
+        randomArray(3, 1, 1).map(() => ({
+            name: product(),
+            count: randomNumber(5, 20)
+        }))
 };
