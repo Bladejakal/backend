@@ -2,9 +2,6 @@ import dg from 'debug';
 
 const debug = dg('router:classes');
 
-// Instruments
-import {Classes} from '../../controllers';
-
 export const get = (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
@@ -17,12 +14,11 @@ export const get = (req, res) => {
     }
 };
 
-export const post = async (req, res) => {
+export const post = (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const classes = new Classes(req.body);
-        const data = await classes.create();
+        const data = {};
 
         res.status(201).json({ data });
     } catch (error) {

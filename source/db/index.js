@@ -19,6 +19,7 @@ const mongooseOptions = {
     useFindAndModify:   false,
     useCreateIndex:     true,
     useUnifiedTopology: true,
+    autoIndex:          false,
 };
 
 const connection = mongoose.connect(

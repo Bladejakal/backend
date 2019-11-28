@@ -1,27 +1,25 @@
 export const createUser = {
-    type: 'object',
+    type:       'object',
     properties: {
         name: {
-            type: 'object',
-            properties: {
-                first: {
-                    type: 'string',
-                    minLength: 3,
-                },
-                last: {
-                    type: 'string',
-                    minLength: 3,
-                }
-            }
+            type:      'string',
+            minLength: 3,
+        },
+        email: {
+            type:   'string',
+            format: 'email',
+        },
+        phone: {
+            type: 'string',
         },
         password: {
             type: 'string',
         },
         sex: {
             type: 'string',
-            enum: ['f', 'm'],
+            enum: [ 'f', 'm' ],
         },
     },
-    required: ['name', 'password', 'sex'],
+    required:             [ 'name', 'email', 'phone', 'password', 'sex' ],
     additionalProperties: false,
 };
