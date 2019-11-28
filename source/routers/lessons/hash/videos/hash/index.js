@@ -1,26 +1,33 @@
 import dg from 'debug';
 
+// Instruments
+import {Lessons} from '../../../../../controllers';
+
 const debug = dg('router:lessons:videos:hash');
 
-export const getVideoByHash = (req, res) => {
+export const getVideoByHash = async  (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const lessons = new Lessons(req.body);
+        const { lessonHash, videoHash } = req.params;
+        const data = await lessons.getVideoByHash(lessonHash, videoHash);
 
-        res.status(200).json({ data });
+        res.status(200).json(data || {});
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
 
-export const removeVideoByHash = (req, res) => {
+export const removeVideoByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const lessons = new Lessons(req.body);
+        const { lessonHash, videoHash } = req.params;
+        await lessons.removeVideoByHash(lessonHash, videoHash);
 
-        res.status(200).json({ data });
+        res.sendStatus(204);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }

@@ -33,6 +33,12 @@ const schema = new mongoose.Schema({
                 title: String,
                 order: Number,
                 uri:   String,
+                hash: {
+                    type:     String,
+                    required: true,
+                    unique:   true,
+                    default:  () => v4(),
+                },
             },
         ],
         keynotes: [
@@ -40,10 +46,21 @@ const schema = new mongoose.Schema({
                 title: String,
                 order: Number,
                 uri:   String,
+                hash: {
+                    type:     String,
+                    required: true,
+                    unique:   true,
+                    default:  () => v4(),
+                },
             },
         ],
     },
-}, { timestamps: { createdAt: 'created', updatedAt: 'modified' } });
+    created: {
+        type:    Date,
+        default: () => new Date(),
+    },
+    modified: Date,
+});
 
 schema.index({ order: 1 }, { name: 'order' });
 

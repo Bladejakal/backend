@@ -1,12 +1,16 @@
 import dg from 'debug';
 
 const debug = dg('router:classes:education');
+// Instruments
+import {Classes, Lessons} from '../../../controllers';
 
-export const enroll = (req, res) => {
+export const enroll = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = [];
+        const classes = new Classes(req.body);
+        const { classHash } = req.params;
+        const data = await classes.enroll(classHash);
 
         res.status(200).json({ data });
     } catch (error) {
@@ -14,13 +18,15 @@ export const enroll = (req, res) => {
     }
 };
 
-export const expel = (req, res) => {
+export const expel = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const classes = new Classes(req.body);
+        const { classHash } = req.params;
+        await classes.expel(classHash);
 
-        res.status(201).json({ data });
+        res.sendStatus(204);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }

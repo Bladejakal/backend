@@ -48,7 +48,12 @@ const schema = new mongoose.Schema({
         },
     },
     order:   Number,
-}, { timestamps: { createdAt: 'created', updatedAt: 'modified' } });
+    created: {
+        type:    Date,
+        default: () => new Date(),
+    },
+    modified: Date,
+});
 
 schema.index({ title: 'text', description: 'text' });
 schema.index({ order: 1 }, { name: 'order' });

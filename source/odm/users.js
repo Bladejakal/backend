@@ -63,7 +63,12 @@ const schema = new mongoose.Schema({
     },
     notes:    String,
     disabled: Boolean,
-}, { timestamps: { createdAt: 'created', updatedAt: 'modified' } });
+    created:  {
+        type:    Date,
+        default: () => new Date(),
+    },
+    modified: Date,
+});
 schema.index({ 'name.first': 1, 'name.last': 1 }, { name: 'flName' });
 schema.index({ notes: 'text' }, { name: 'notes' });
 

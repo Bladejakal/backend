@@ -1,26 +1,33 @@
 import dg from 'debug';
 
+import {Lessons} from '../../../../../controllers';
+
 const debug = dg('router:lessons:keynotes:hash');
 
-export const getKeynoteByHash = (req, res) => {
+export const getKeynoteByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const lessons = new Lessons(req.body);
+        const { lessonHash, keynoteHash } = req.params;
+        const data = await lessons.getKeynoteByHash(lessonHash, keynoteHash);
 
-        res.status(200).json({ data });
+        res.status(200).json(data || {});
+
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
 
-export const removeKeynoteByHash = (req, res) => {
+export const removeKeynoteByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const lessons = new Lessons(req.body);
+        const { lessonHash, keynoteHash } = req.params;
+        await lessons.removeKeynoteByHash(lessonHash, keynoteHash);
 
-        res.status(200).json({ data });
+        res.sendStatus(204);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }

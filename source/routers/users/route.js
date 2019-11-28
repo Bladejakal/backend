@@ -5,11 +5,12 @@ import { Users } from '../../controllers';
 
 const debug = dg('router:users');
 
-export const get = (req, res) => {
+export const get = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = [];
+        const user = new Users(req.body);
+        const data = await user.get();
 
         res.status(200).json({ data });
     } catch (error) {

@@ -2,11 +2,16 @@ import dg from 'debug';
 
 const debug = dg('router:lessons:videos');
 
-export const addVideo = (req, res) => {
+// Instruments
+import {Lessons} from '../../../../controllers';
+
+export const addVideo = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const data = {};
+        const lessons = new Lessons(req.body);
+        const { lessonHash } = req.params;
+        const data = await lessons.addVideo(lessonHash);
 
         res.status(200).json({ data });
     } catch (error) {
