@@ -13,20 +13,30 @@ const schema = new mongoose.Schema(
             unique:   true,
             default:  () => v4(),
         },
-        title:       String,
-        description: String,
+        title: {
+            type: String,
+            maxlength: 30,
+        },
+        description: {
+            type:     String,
+            maxlength: 250,
+        },
         students:    [
             {
                 user: {
                     type: mongoose.SchemaTypes.ObjectId,
                     ref:  users,
+
                 },
                 status: {
                     type: String,
                     enum: [ 'standard', 'select', 'premium' ],
                 },
                 expelled: Boolean,
-                notes:    String,
+                notes: {
+                    type: String,
+                    maxlength: 250,
+                },
             },
         ],
         lessons: [
@@ -41,17 +51,50 @@ const schema = new mongoose.Schema(
         duration: {
             started: {
                 type:     Date,
-                required: true,
+                required() {
+                    if (this.started > this.closed) {
+                        return true;
+                    }
+
+                    return false;
+                }
             },
             closed: {
                 type:     Date,
                 required: true,
             },
         },
-        order: Number,
+        order: {
+            type: Number,
+            min: 0
+        },
     },
     { timestamp: { createdAt: 'created', updatedAt: 'modified' } },
 );
+
+schema.path('students.user').validate(async function(value) {
+    const data = await users.findOne({ hash: value });
+
+    if (!data) {
+        throw new Error(
+            `User with hash ${value} wasn't found in the users collection`,
+        );
+    }
+
+    return true;
+});
+
+schema.path('lessons.lesson').validate(async function(value) {
+    const data = await lessons.findOne({ hash: value });
+
+    if (!data) {
+        throw new Error(
+            `Lesson with hash ${value} wasn't found in the lessons collection`,
+        );
+    }
+
+    return true;
+});
 
 schema.index({ title: 'text', description: 'text' });
 schema.index({ order: 1 }, { name: 'order' });

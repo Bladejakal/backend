@@ -13,10 +13,14 @@ const schema = new mongoose.Schema(
         name: {
             first: {
                 type:     String,
+                minlength: 2,
+                maxlength: 15,
                 required: true,
             },
             last: {
                 type:     String,
+                minlength: 2,
+                maxlength: 15,
                 required: true,
             },
         },
@@ -26,6 +30,19 @@ const schema = new mongoose.Schema(
                     type:     String,
                     unique:   true,
                     required: true,
+                    validate: {
+                        validator(value) {
+                            if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                                return true;
+                            }
+
+                            return false;
+                        },
+                        message(props) {
+                            const { value } = props;
+                            return `Email: '${value}' is not valid`;
+                        },
+                    },
                 },
                 primary: Boolean,
             },
@@ -57,12 +74,60 @@ const schema = new mongoose.Schema(
             },
         ],
         socials: {
-            facebook: String,
-            linkedin: String,
-            github:   String,
+            facebook: {
+                type: String,
+                validate: {
+                    validator(value) {
+                        if (/(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?([\w\-]*)?/.test(value)) {
+                            return true;
+                        }
+
+                        return false;
+                    },
+                    message(props) {
+                        const { value } = props;
+                        return `Facebook link: '${value}' is not valid`;
+                    },
+                }
+            },
+            linkedin: {
+                type: String,
+                validate: {
+                    validator(value) {
+                        if (/^(?:https?:\/\/)?.*linkedin\.com\/(?:in|company)\/([\w\.\-\_]+)\/?$/.test(value)) {
+                            return true;
+                        }
+
+                        return false;
+                    },
+                    message(props) {
+                        const { value } = props;
+                        return `Linkedin link: '${value}' is not valid`;
+                    },
+                }
+            },
+            github:   {
+                type: String,
+                validate: {
+                    validator(value) {
+                        if (/^(?:https?:\/\/)?(?:www\.)?github\.com\/([a-zA-Z0-9_]+).*$/.test(value)) {
+                            return true;
+                        }
+
+                        return false;
+                    },
+                    message(props) {
+                        const { value } = props;
+                        return `Github link: '${value}' is not valid`;
+                    },
+                }
+            },
             skype:    String,
         },
-        notes:    String,
+        notes: {
+            type: String,
+            maxlength: 250,
+        },
         disabled: Boolean,
     },
     { timestamp: { createdAt: 'created', updatedAt: 'modified' } },
