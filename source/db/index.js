@@ -13,8 +13,6 @@ const mongooseOptions = {
     poolSize:           50,
     keepAlive:          30000,
     connectTimeoutMS:   5000,
-    reconnectTries:     Number.MAX_SAFE_INTEGER,
-    reconnectInterval:  5000,
     useNewUrlParser:    true,
     useFindAndModify:   false,
     useCreateIndex:     true,

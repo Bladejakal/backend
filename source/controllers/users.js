@@ -1,10 +1,10 @@
-import { Users as UsersModel } from '../models';
+// Instruments
+import { Users as UserModel } from '../models';
 
 export class Users {
-    // data ← req.body
     constructor(data) {
         this.models = {
-            users: new UsersModel(data),
+            users: new UserModel(data),
         };
     }
 
@@ -14,26 +14,26 @@ export class Users {
         return data;
     }
 
-    async get() {
-        const data = await this.models.users.get();
+    async getAll() {
+        const data = await this.models.users.getAll();
 
         return data;
     }
 
-    async getByHash(userHash) {
-        const data = await this.models.users.getByHash(userHash);
+    async getByHash() {
+        const data = await this.models.users.getByHash();
 
         return data;
     }
 
-    async updateByHash(userHash) {
-        const data = await this.models.users.updateByHash(userHash);
+    async updateByHash() {
+        const data = await this.models.users.updateByHash();
 
         return data;
     }
 
-    async deleteByHash(userHash) {
-        const data = await this.models.users.deleteByHash(userHash);
+    async removeByHash() {
+        const data = await this.models.users.removeByHash();
 
         return data;
     }

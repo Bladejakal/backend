@@ -1,3 +1,4 @@
+// Core
 import dg from 'debug';
 
 // Instruments
@@ -9,12 +10,11 @@ export const getByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const user = new Users(req.body);
         const { userHash } = req.params;
+        const model = new Users({ hash: userHash });
+        const data = await model.getByHash();
 
-        const data = await user.getByHash(userHash);
-
-        res.status(200).json(data || {});
+        res.status(200).json({ data });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -24,12 +24,11 @@ export const updateByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const user = new Users(req.body);
         const { userHash } = req.params;
+        const model = new Users({ hash: userHash, payload: req.body });
+        const data = await model.updateByHash();
 
-        const data = await user.updateByHash(userHash);
-
-        res.status(200).json(data || {});
+        res.status(200).json({ data });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -39,10 +38,10 @@ export const removeByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const user = new Users(req.body);
         const { userHash } = req.params;
+        const model = new Users({ hash: userHash });
 
-        await user.deleteByHash(userHash);
+        await model.removeByHash();
 
         res.sendStatus(204);
     } catch (error) {

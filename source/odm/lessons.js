@@ -2,65 +2,51 @@
 import mongoose from 'mongoose';
 import v4 from 'uuid/v4';
 
-const schema = new mongoose.Schema({
-    hash: {
-        type:     String,
-        required: true,
-        unique:   true,
-        default:  () => v4(),
-    },
-    title: {
-        type:     String,
-        required: true,
-    },
-    description: {
-        type:     String,
-        required: true,
-    },
-    order: {
-        type:     Number,
-        required: true,
-    },
-    availability: [
-        {
-            type: String,
-            enum: [ 'standard', 'select', 'premium' ],
+const schema = new mongoose.Schema(
+    {
+        hash: {
+            type:     String,
+            required: true,
+            unique:   true,
+            default:  () => v4(),
         },
-    ],
-    content: {
-        videos: [
+        title: {
+            type:     String,
+            required: true,
+        },
+        description: {
+            type:     String,
+            required: true,
+        },
+        order: {
+            type:     Number,
+            required: true,
+        },
+        availability: [
             {
-                title: String,
-                order: Number,
-                uri:   String,
-                hash: {
-                    type:     String,
-                    required: true,
-                    unique:   true,
-                    default:  () => v4(),
-                },
+                type: String,
+                enum: [ 'standard', 'select', 'premium' ],
             },
         ],
-        keynotes: [
-            {
-                title: String,
-                order: Number,
-                uri:   String,
-                hash: {
-                    type:     String,
-                    required: true,
-                    unique:   true,
-                    default:  () => v4(),
+        content: {
+            videos: [
+                {
+                    title: String,
+                    order: Number,
+                    uri:   String,
                 },
-            },
-        ],
+            ],
+            keynotes: [
+                {
+                    title: String,
+                    order: Number,
+                    uri:   String,
+                },
+            ],
+        },
     },
-    created: {
-        type:    Date,
-        default: () => new Date(),
-    },
-    modified: Date,
-});
+    { timestamp: { createdAt: 'created', updatedAt: 'modified' } },
+);
 
 schema.index({ order: 1 }, { name: 'order' });
 

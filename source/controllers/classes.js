@@ -1,7 +1,7 @@
+// Instruments
 import { Classes as ClassesModel } from '../models';
 
 export class Classes {
-    // data ← req.body
     constructor(data) {
         this.models = {
             classes: new ClassesModel(data),
@@ -14,38 +14,38 @@ export class Classes {
         return data;
     }
 
-    async get() {
-        const data = await this.models.classes.get();
+    async getAll() {
+        const data = await this.models.classes.getAll();
 
         return data;
     }
 
-    async getByHash(classesHash) {
-        const data = await this.models.classes.getByHash(classesHash);
+    async getByHash() {
+        const data = await this.models.classes.getByHash();
 
         return data;
     }
 
-    async updateByHash(classesHash) {
-        const data = await this.models.classes.updateByHash(classesHash);
+    async updateByHash() {
+        const data = await this.models.classes.updateByHash();
 
         return data;
     }
 
-    async deleteByHash(classesHash) {
-        const data = await this.models.classes.deleteByHash(classesHash);
+    async removeByHash() {
+        const data = await this.models.classes.removeByHash();
 
         return data;
     }
 
-    async enroll(classHash) {
-        const data = await this.models.classes.enroll(classHash);
+    async enroll() {
+        const data = await this.models.classes.enroll();
 
         return data;
     }
 
-    async expel(classHash) {
-        const data = await this.models.classes.expel(classHash);
+    async expel() {
+        const data = await this.models.classes.expel();
 
         return data;
     }

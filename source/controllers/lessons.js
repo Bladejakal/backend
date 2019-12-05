@@ -1,7 +1,7 @@
+// Instruments
 import { Lessons as LessonsModel } from '../models';
 
 export class Lessons {
-    // data ← req.body
     constructor(data) {
         this.models = {
             lessons: new LessonsModel(data),
@@ -14,62 +14,62 @@ export class Lessons {
         return data;
     }
 
-    async get() {
-        const data = await this.models.lessons.get();
+    async getAll() {
+        const data = await this.models.lessons.getAll();
 
         return data;
     }
 
-    async getByHash(lessonsHash) {
-        const data = await this.models.lessons.getByHash(lessonsHash);
+    async getByHash() {
+        const data = await this.models.lessons.getByHash();
 
         return data;
     }
 
-    async updateByHash(lessonsHash) {
-        const data = await this.models.lessons.updateByHash(lessonsHash);
+    async updateByHash() {
+        const data = await this.models.lessons.updateByHash();
 
         return data;
     }
 
-    async deleteByHash(lessonsHash) {
-        const data = await this.models.lessons.deleteByHash(lessonsHash);
+    async removeByHash() {
+        const data = await this.models.lessons.removeByHash();
 
         return data;
     }
 
-    async addVideo(lessonsHash) {
-        const data = await this.models.lessons.addVideo(lessonsHash);
+    async addVideo() {
+        const data = await this.models.lessons.addVideo();
 
         return data;
     }
 
-    async addKeynote(lessonsHash) {
-        const data = await this.models.lessons.addKeynote(lessonsHash);
+    async addKeynote() {
+        const data = await this.models.lessons.addKeynote();
 
         return data;
     }
 
-    async getVideoByHash(lessonHash, videoHash) {
-        const data = await this.models.lessons.getVideoByHash(lessonHash, videoHash);
+    async getVideo() {
+        const data = await this.models.lessons.getVideo();
 
         return data;
     }
 
-    async getKeynoteByHash(lessonHash, keynoteHash) {
-        const data = await this.models.lessons.getKeynoteByHash(lessonHash, keynoteHash);
+    async removeVideo() {
+        const data = await this.models.lessons.removeVideo();
 
         return data;
     }
 
-    async removeVideoByHash(lessonHash, videoHash) {
-        const data = await this.models.lessons.removeVideoByHash(lessonHash, videoHash);
+    async getKeynote() {
+        const data = await this.models.lessons.getKeynote();
 
         return data;
     }
 
-    async removeKeynoteByHash(lessonHash, keynoteHash) {
-        const data = await this.models.lessons.removeKeynoteByHash(lessonHash, keynoteHash);
+    async removeKeynote() {
+        const data = await this.models.lessons.removeKeynote();
 
         return data;
     }

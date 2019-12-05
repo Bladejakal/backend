@@ -1,7 +1,8 @@
+// Core
 import dg from 'debug';
 
 // Instruments
-import {Classes, Lessons} from '../../../controllers';
+import { Classes } from '../../../controllers';
 
 const debug = dg('router:classes:hash');
 
@@ -9,12 +10,11 @@ export const getByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const classes = new Classes(req.body);
         const { classHash } = req.params;
+        const model = new Classes({ hash: classHash });
+        const data = await model.getByHash();
 
-        const data = await classes.getByHash(classHash);
-
-        res.status(200).json(data || {});
+        res.status(200).json({ data });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -24,12 +24,11 @@ export const updateByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const classes = new Classes(req.body);
         const { classHash } = req.params;
+        const model = new Classes({ hash: classHash, payload: req.body });
+        const data = await model.updateByHash();
 
-        const data = await classes.updateByHash(classHash);
-
-        res.status(200).json(data || {});
+        res.status(200).json({ data });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -39,10 +38,12 @@ export const removeByHash = async (req, res) => {
     debug(`${req.method} - ${req.originalUrl}`);
 
     try {
-        const classes = new Classes(req.body);
         const { classHash } = req.params;
+        const model = new Classes({ hash: classHash });
 
-        await classes.deleteByHash(classHash);
+        await model.removeByHash();
+
+        res.sendStatus(204);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
