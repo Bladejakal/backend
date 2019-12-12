@@ -1,4 +1,5 @@
+export { staff } from './staff';
+export { customers } from './customers';
+export { products } from './products';
+export { orders } from './orders';
 export { users } from './users';
-export { lessons } from './lessons';
-export { classes } from './classes';
-export { logs } from './logs';

@@ -1,26 +1,25 @@
 {
-    "name": "backend-3",
-    "version": "0.0.1",
+    "name": "backend-personal",
+    "version": "0.1.5",
     "main": "index.js",
     "scripts": {
-        "start": "DB_URL=lab.lectrum.io DB_PORT=37019 DB_NAME=vpuhach nodemon",
-        "start:prod": "NODE_ENV='production' PORT=3000 node -r @babel/register ./source/index.js",
+        "start": "nodemon",
         "build": "NODE_ENV=production node -r @babel/register './node_modules/.bin/webpack' --config=./webpack/webpack.config.js",
         "lint:eslint": "jest --projects 'jest/jest.eslint.config.json'"
     },
     "engines": {
-        "node": ">=10.16.*"
+        "node": ">=10.16.3"
     },
     "license": "MIT",
     "devDependencies": {
-        "@babel/core": "^7.7.2",
-        "@babel/plugin-proposal-class-properties": "^7.7.0",
-        "@babel/preset-env": "^7.7.1",
-        "@babel/register": "^7.7.0",
+        "@babel/core": "^7.6.4",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/register": "^7.6.2",
         "@lectrum/config-commitlint": "^1.1.0",
         "@lectrum/eslint-config-core": "^1.1.15",
         "babel-core": "^7.0.0-bridge.0",
-        "babel-eslint": "~10.0.3",
+        "babel-eslint": "^10.0.3",
         "babel-jest": "^24.9.0",
         "babel-loader": "^8.0.6",
         "babel-preset-jest": "^24.9.0",
@@ -31,20 +30,20 @@
         "mongodb-memory-server": "^6.0.1",
         "nock": "^11.7.0",
         "nodemon": "^1.19.4",
-        "prettier": "^1.19.1",
         "supertest": "^4.0.2",
         "webpack": "^4.41.2",
         "webpack-bundle-analyzer": "^3.6.0",
         "webpack-cli": "^3.3.10",
         "webpack-merge": "^4.2.2",
-        "webpack-node-externals": "^1.7.2"
+        "webpack-node-externals": "^1.7.2",
+        "mock-mongoose": "^7.4.0-r2"
     },
     "dependencies": {
         "@godaddy/terminus": "^4.2.1",
         "ajv": "^6.10.2",
         "bcryptjs": "^2.4.3",
-        "body-parser": "^1.19.0",
-        "cookie-parser": "^1.4.4",
+        "bcrypt": "^3.0.6",
+        "connect-mongo": "^3.1.2",
         "debug": "^4.1.1",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
@@ -53,7 +52,7 @@
         "helmet": "^3.21.2",
         "jsonwebtoken": "^8.5.1",
         "moment": "^2.24.0",
-        "mongoose": "^5.7.11",
+        "mongoose": "^5.7.7",
         "uuid": "^3.3.3",
         "winston": "^3.2.1"
     }

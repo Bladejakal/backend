@@ -30,8 +30,8 @@ export class Auth {
             throw new Error('credentials not valid');
         }
 
-        const { roles, hash, emails } = data;
+        const { __t, hash, emails } = data;
 
-        return { roles, hash, emails };
+        return { __t, hash, emails };
     }
 }

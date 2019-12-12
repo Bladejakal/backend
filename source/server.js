@@ -1,48 +1,77 @@
 // Core
 import express from 'express';
 import session from 'express-session';
+import mongoose from 'mongoose';
+import connectMongo from 'connect-mongo';
+import bodyParser from 'body-parser';
+import dg from 'debug';
 
 // Instruments
-import {
-    logger,
-    errorLogger,
-    NotFoundError,
-    notFoundLogger,
-    validationLogger,
-    sessionOptions,
-} from './utils';
+import { getPassword, NotFoundError } from './helpers';
+
+// Initialize DB connection
+import './db';
 
 // Routers
-import { auth, users, classes, lessons } from './routers';
+import { auth, staff, customers, products, orders } from './routers';
 
 const app = express();
+const debug = dg('server:init');
+const MongoStore = connectMongo(session);
 
+const sessionOptions = {
+    key:               'user',
+    secret:            getPassword(),
+    resave:            false,
+    rolling:           true,
+    saveUninitialized: false,
+    store:             new MongoStore({ mongooseConnection: mongoose.connection }),
+    cookie:            {
+        httpOnly: true,
+        maxAge:   15 * 60 * 1000,
+    },
+};
+
+// change cookie max age for development
+if (process.env.NODE_ENV === 'development') {
+    sessionOptions.cookie.maxAge = 8 * 60 * 60 * 1000; // 8 hours
+}
+
+// secure cookie for production
+if (process.env.NODE_ENV === 'production') {
+    sessionOptions.cookie.secure = true;
+}
+
+app.use(
+    bodyParser.json({
+        limit: '5kb',
+    }),
+);
 app.use(session(sessionOptions));
-app.use(express.json({ limit: '10kb' }));
 
-// Logger
 if (process.env.NODE_ENV === 'development') {
     app.use((req, res, next) => {
-        let body = null;
+        const body
+            = req.method === 'GET'
+                ? 'Body not supported for GET'
+                : JSON.stringify(req.body, null, 2);
 
-        if (req.method !== 'GET') {
-            body = JSON.stringify(req.body, null, 2);
-        }
-
-        logger.debug(`${req.method} ${body ? `\n${body}` : ''}`);
+        debug(`${req.method}\n${body}`);
         next();
     });
 }
 
 // Routers
-app.use('/', auth);
-app.use('/users', users);
-app.use('/classes', classes);
-app.use('/lessons', lessons);
+app.use('/auth', auth);
+app.use('/staff', staff);
+app.use('/customers', customers);
+app.use('/products', products);
+app.use('/orders', orders);
 
 app.use('*', (req, res, next) => {
     const error = new NotFoundError(
         `Can not find right route for method ${req.method} and path ${req.originalUrl}`,
+        404,
     );
     next(error);
 });
@@ -53,19 +82,7 @@ if (process.env.NODE_ENV !== 'test') {
         const { name, message, statusCode } = error;
         const errorMessage = `${name}: ${message}`;
 
-        switch (error.name) {
-            case 'NotFoundError':
-                notFoundLogger.error(errorMessage);
-                break;
-
-            case 'ValidationError':
-                validationLogger.error(errorMessage);
-                break;
-
-            default:
-                errorLogger.error(errorMessage);
-                break;
-        }
+        debug(`Error: ${errorMessage}`);
 
         const status = statusCode ? statusCode : 500;
         res.status(status).json({ message: message });

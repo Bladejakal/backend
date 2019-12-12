@@ -7,5 +7,5 @@
         "NODE_ENV": "development"
     },
     "exec": "node -r dotenv/config -r @babel/register ./source/index.js",
-    "ext": "js"
+    "ext": "js, yaml, yml"
 }
